@@ -83,24 +83,24 @@ const handleRemoveSpacesClick = () => {
    {/*    <p><b>Word Count:</b> {wordCount} &nbsp; | &nbsp; <b>Character Count:</b> {charCount}</p>*/}
 
       </div>
-      <button className="btn btn-primary mx-1" onClick={handleUpClick}>
+      <button disabled={text.trim().length===0} className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>
         Convert to Uppercase
       </button>
-      <button className="btn btn-secondary mx-1" onClick={handleLoClick}>
+      <button disabled={text.trim().length===0} className="btn btn-secondary mx-1 my-1" onClick={handleLoClick}>
         Convert to Lowercase
       </button>
-      <button className="btn btn-danger mx-1" onClick={handleClearClick}>
+      <button disabled={text.trim().length===0} className="btn btn-danger mx-1 my-1" onClick={handleClearClick}>
         Clear Text
       </button>
 
-      <button className="btn btn-warning mx-1" onClick={handleCopyClick}>
+      <button disabled={text.trim().length===0} className="btn btn-warning mx-1 my-1" onClick={handleCopyClick}>
         Copy Text
       </button>
 
-      <button className="btn btn-info mx-1" onClick={handleSpeakClick}>
+      <button disabled={text.trim().length===0} className="btn btn-info mx-1 my-1" onClick={handleSpeakClick}>
         Speak/Stop Text
       </button>
-      <button className="btn btn-dark mx-1" onClick={handleRemoveSpacesClick}>
+      <button disabled={text.trim().length===0} className="btn btn-dark mx-1 my-1" onClick={handleRemoveSpacesClick}>
         Remove Extra Spaces
       </button>
     </div>
@@ -120,7 +120,7 @@ const handleRemoveSpacesClick = () => {
         </h2>
 
         <p>
-            {text.length>0?text:"Enter something above to preview here!!"}
+            {text.length>0?text:"Nothing to preview!"}
         </p>
     </div>
     </>
