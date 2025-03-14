@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from "./Footer";
 
 export default function TextForm(props) {
   const handleUpClick = () => {
@@ -122,6 +123,9 @@ const handleRemoveSpacesClick = () => {
         <p>
             {text.length>0?text:"Nothing to preview!"}
         </p>
+        <div>
+        <Footer/>
+        </div>
     </div>
     </>
   );
